@@ -35,8 +35,43 @@ To develop a Python class with functions to:
 
 ## 💻 PROGRAM:
 
-ADD CODE HERE
+```
+    def __init__(self):
+        self.N = int(input())
+        self.L = []
+
+    def create_list(self):
+        print()
+        for i in range(self.N):
+            x = int(input())
+            self.L.append(x)
+
+    def insertion_sort(self):
+        for i in range(1, len(self.L)):
+            key = self.L[i]
+            j = i - 1
+            while j >= 0 and key < self.L[j]:
+                self.L[j + 1] = self.L[j]
+                j -= 1
+            self.L[j + 1] = key
+
+    def print_list(self):
+        for num in self.L:
+            print(num, end=" ")
+        print()
+
+L1 = InsertionSorter()
+L1.create_list()
+print("Before Sorting:")
+L1.print_list()
+L1.insertion_sort()
+print("After Sorting:")
+L1.print_list()
+```
+
 
 ## OUTPUT:
+<img width="455" height="576" alt="image" src="https://github.com/user-attachments/assets/8cc5ac73-bd98-459c-9e61-5d13ce591d33" />
 
 ## RESULT:
+Thus, the Insertion Sort algorithm is implemented using python program.
